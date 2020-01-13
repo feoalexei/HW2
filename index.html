@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>How old are you</title>
+</head>
+<body>
+    <script>
+        var age = +prompt('Введите Ваш возраст');
+
+         // condition for 1, 21, 31.. etc. (except numbers ending with 11) 
+        if ( age % 10 == 1 && age % 100 !== 11 ) {
+            alert('Вам '+ age + ' год');
+        }  
+        // condition for 5 - 20  
+            else if ( age % 100 > 4 && age % 100 < 21 ) {
+                alert('Вам '+ age + ' лет');
+        }
+        // condition for 2-4 & 22, 23 .. etc. 
+            else if ( (age % 10 > 1 && age % 10 < 5 ) ) {
+                alert('Вам '+ age + ' года');
+        }
+        // condition for input of nothing or Cancel
+            else if (  age == '' ) {
+                alert('Вы не указали свой возраст');
+        } 
+        // condition for input of not a number or negative numbers
+            else if ( age < 0 || isNaN(age) ) {
+                alert('Попробуйте еще раз ввести возраст правильно');
+        } 
+        // condition for all other number cases
+            else {
+                alert('Вам '+ age + ' лет');
+        }
+    </script>
+</body>
+</html>
